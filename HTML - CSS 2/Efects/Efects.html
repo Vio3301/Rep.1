@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #333;
+        }
+        #peiper{
+            width: 1000px;
+            height: 600px;
+            border: 20px solid white;
+            background-color: #222; 
+            position: relative;
+            perspective: 1000px;
+        }
+        #peiper .seg{
+            width: 200px;
+            height: 600px;
+            position: absolute;
+            top: 0;
+            background-image: url(img1.jpg);
+        }
+        #peper .seg:last-child{
+            left:0;
+        }
+        #peiper .seg:nth-child(2){
+           left: 178px;
+           background-position: -200px 0;
+           transform: scale(1.05) rotateY(-30deg);
+        }
+        #peiper .seg:nth-child(3){
+            left: 361px;
+            background-position: -400px 0;
+            transform: scale(1.05) rotateY(30deg);
+
+         }
+         #peiper .seg:nth-child(4){
+            left: 542px;
+            background-position: -600px 0;
+            transform: scale(1.05) rotateY(-30deg);
+         }
+         #peiper .seg:first-child{
+            left: 723px;
+            background-position: -800px 0;
+            transform: scale(1.05) rotateY(30deg);
+         }
+         #peiper .seg:nth-child(3) .shadow{
+             width: 200px;
+             height: 600px;
+            /* background-color:grey;*/
+            background-image:  linear-gradient(-90deg, #0001, #0000 );
+        
+         }
+         #peiper .seg:nth-child(4) .shadow{
+             width: 200px;
+             height: 600px;
+             background-image: linear-gradient(-90deg, #0001, #000);
+         }
+
+    </style>
+</head>
+<body>
+    <div id="peiper">
+        <div class="seg"></div>
+        <div class="seg"></div>
+        <div class="seg"><div class="shadow"></div></div>
+        <div class="seg"><div class="shadow"></div></div>
+        <div class="seg"></div>
+    </div>
+</body>
+</html>
